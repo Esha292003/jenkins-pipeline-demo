@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the web app...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Pretending to deploy to localhost...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Pinging app at http://localhost...'
+                bat 'ping 127.0.0.1 -n 1'
+            }
+        }
+    }
+}
